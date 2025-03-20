@@ -25,12 +25,13 @@ int main() {
     // Implementação de Movimentação do bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.   
     
-    printf("MOVIMENTAÇÃO DO BISPO:\n");
-    int 1 = 0 //aqui inicia a variável i
+    printf("\nMOVIMENTAÇÃO DO BISPO:\n");
+    int i = 1; //aqui inicia a variável i
     while (i <= BISPO_MOVIMENTO)
+    {
         printf("MOVENDO O BISPO NA DIAGONAL %d CASA(S)\n", i);
-        i++ //incrementação
-
+        i++; //incrementação
+    }
     // Implementação de Movimentação da Rainha
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
 
