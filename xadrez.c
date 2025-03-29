@@ -8,6 +8,7 @@
     #define TORRE_MOVIMENTO 5
     #define BISPO_MOVIMENTO 5
     #define RAINHA_MOVIMENTO 8
+    #define CAVALO_MOVIMENTO 3
 
     
 int main() {
@@ -46,13 +47,22 @@ int main() {
     }
     while (i <= RAINHA_MOVIMENTO); // Continua enquanto i for menor ou igual a RAINHA_MOVIMENTO
 
-    
-    
-    
-
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
     // Um loop pode representar a movimentação horizontal e outro vertical.
+
+    printf("\nMOVIMENTAÇÃO DO CAVALO:\n");
+
+for ( int i = 1; i <= CAVALO_MOVIMENTO; i++) //loop externo
+{
+  for (int j = 1; j <= 1; j++) //loop interno
+  {
+    printf("MOVENDO O CAVALO PARA BAIXO %d CASA(S)\n", 2);
+
+    printf("MOVENDO O CAVALO PARA ESQUERDA %d CASA(S)\n", 1);
+  }
+  
+}
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
