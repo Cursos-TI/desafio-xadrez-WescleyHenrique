@@ -8,20 +8,25 @@
     #define TORRE_MOVIMENTO 5
     #define BISPO_MOVIMENTO 5
     #define RAINHA_MOVIMENTO 8
-    #define CAVALO_MOVIMENTO 3
+    #define CAVALO_MOVIMENTO 1
+
+    //movimentação da torre
+void moverTorre(int casas){
+    if (casas > 0)
+   {
+    printf("MOVENDO A TORRE EM LINHA RETA 1 CASA A DIREITA\n");
+    moverTorre(casas - 1);
+   }
+}
 
     
 int main() {
 
     // Implementação de Movimentação da torre usando for
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-    printf("MOVIMENTAÇÃO DA TORRE:\n");
-
-    for (int i = 1;i <= TORRE_MOVIMENTO; i++) // Continua enquanto i for menor ou igual a TORRE_MOVIMENTO
-
-    {
-        printf("MOVENDO A TORRE EM LINHA RETA %d CASA(S)\n", i);
-    }
+    
+    printf("\nMOVIMENTAÇÃO DA TORRE\n");
+    moverTorre(TORRE_MOVIMENTO);
     
 
     // Implementação de Movimentação do bispo usando while
@@ -51,7 +56,7 @@ int main() {
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
     // Um loop pode representar a movimentação horizontal e outro vertical.
 
-    printf("\nMOVIMENTAÇÃO DO CAVALO:\n");
+    printf("\nMOVIMENTAÇÃO DO CAVALO (usando for):\n");
 
 for ( int i = 1; i <= CAVALO_MOVIMENTO; i++) //loop externo
 {
@@ -61,9 +66,20 @@ for ( int i = 1; i <= CAVALO_MOVIMENTO; i++) //loop externo
 
     printf("MOVENDO O CAVALO PARA ESQUERDA %d CASA(S)\n", 1);
   }
+  }
   
-}
-
+ // Movimentação do Cavalo usando while
+ printf("\nMOVIMENTAÇÃO DO CAVALO (usando while):\n");
+ int k = 1; // Usando uma nova variável para o loop externo
+ while (k <= CAVALO_MOVIMENTO) {
+     int j = 1; // Inicializa o contador para o loop interno
+     while (j <= 1) {
+         printf("MOVENDO O CAVALO PARA BAIXO 2 CASA(S)\n");
+         printf("MOVENDO O CAVALO PARA ESQUERDA 1 CASA(S)\n");
+         j++; // Incrementa o contador do loop interno
+     }
+     k++; // Incrementa o contador do loop externo
+ }
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
     // Exemplo: Crie uma função recursiva para o movimento do Bispo.
