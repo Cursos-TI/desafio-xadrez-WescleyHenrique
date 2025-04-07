@@ -10,47 +10,55 @@
     #define RAINHA_MOVIMENTO 8
     #define CAVALO_MOVIMENTO 1
 
-    //movimentação da torre
-void moverTorre(int casas){
-    if (casas > 0)
-   {
-    printf("MOVENDO A TORRE EM LINHA RETA 1 CASA A DIREITA\n");
-    moverTorre(casas - 1);
-   }
+    //MOVIMENTAÇÃO DA TORRE
+    void moverTorre(int casas){
+        if (casas > 0)
+    {
+        printf("MOVENDO A TORRE EM LINHA RETA 1 CASA A DIREITA\n");
+        moverTorre(casas - 1);
+    }
 }
+
+    //MOVIMENTAÇÃO DO BISPO
+    void moverBispo(int casas){
+    for (int vertical = 0; vertical < 5; vertical++) {
+        printf("MOVENDO O BISPO 1 CASA PARA CIMA\t");
+        for (int horizontal = 0; horizontal < 1; horizontal++) {
+            printf("MOVENDO O BISPO 1 CASA PARA DIREITA\n");
+        }
+    }
+}
+
+
+    //MOVIMENTAÇÃO DA RAINHA
+    void moverRainha(int casas){
+        if (casas > 0)
+        {
+            printf("MOVENDO A RAINHA 1 CASA PARA ESQUERDA\n");
+            moverRainha(casas - 1);
+    
+        }
+
+    //MOVIMENTAÇÃO DO CAVALO
 
     
 int main() {
 
     // Implementação de Movimentação da torre usando for
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-    
+
     printf("\nMOVIMENTAÇÃO DA TORRE\n");
     moverTorre(TORRE_MOVIMENTO);
     
 
     // Implementação de Movimentação do bispo usando while
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.   
-    
-    printf("\nMOVIMENTAÇÃO DO BISPO:\n");
-    int i = 1; //aqui inicia a variável i
-    while (i <= BISPO_MOVIMENTO) // Continua enquanto i for menor ou igual a BISPO_MOVIMENTO
-
-    {
-        printf("MOVENDO O BISPO NA DIAGONAL CIMA/DIREITA %d CASA(S)\n", i);
-        i++; //incrementação
-    }
+    printf("\nMOVIMENTAÇÃO DO BISPO\n");
+    moverBispo(BISPO_MOVIMENTO);
     // Implementação de Movimentação da Rainha usando do-while
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
     printf("\nMOVIMENTAÇÃO DA RAINHA\n");
-    i = 1;
-
-    do
-    {
-        printf("MOVENDO A RAINHA PARA ESQUERDA %d CASA(S)\n", i);
-        i++; //incrementação
-    }
-    while (i <= RAINHA_MOVIMENTO); // Continua enquanto i for menor ou igual a RAINHA_MOVIMENTO
+    moverRainha(RAINHA_MOVIMENTO);
 
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
