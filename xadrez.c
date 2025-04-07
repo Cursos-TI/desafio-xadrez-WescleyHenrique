@@ -22,7 +22,7 @@
     //MOVIMENTAÇÃO DO BISPO
     void moverBispo(int casas){
     for (int vertical = 0; vertical < casas; vertical++) {
-        printf("MOVENDO O BISPO 1 CASA PARA CIMA\t");
+        printf("MOVENDO O BISPO 1 CASA PARA CIMA ==>\t");
         for (int horizontal = 0; horizontal < 1; horizontal++) {
             printf("MOVENDO O BISPO 1 CASA PARA DIREITA\n");
         }
@@ -61,7 +61,7 @@ int main(){
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
     // Um loop pode representar a movimentação horizontal e outro vertical.
 
-    printf("\nMOVIMENTAÇÃO DO CAVALO (usando for):\n");
+    printf("\nMOVIMENTAÇÃO DO CAVALO:\n");
 
 // Loop para simular o movimento do cavalo
 for (int i = 0; i < 2; i++) { // Loop para 2 casas para cima
